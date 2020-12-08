@@ -1,36 +1,23 @@
 import React from "react";
+import styled from "styled-components";
 
-function BemVindo(props){
-  return(
-    <div>
-      <h1>Osmar {props.name} vc tem: {props.idade} anos</h1>
-    </div>
-  )
-}
+const Title = styled.h1`
 
-function Avatar(props) {
-  return (
-    <div>
-      <img src={props.url} alt={props.name}></img> <br />
-      <span>{props.name}</span>
-    </div>
-  );
-}
+  color: red;
+  font-size: 18px;
+  background-color: #ccc;
+  border: 1px solid black;
+
+`;
 
 function App() {
   return (
     <div>
       <div>
-        <BemVindo name="Lima" idade="35"/>
+        <Title>Título bem legal!</Title>
       </div>
-    
-    <div>
-      <Avatar url="https://www.google.com.br/google.jpg" name="Osmar Lima" />
-    </div>
-
     </div>
   );
 }
 
-// chamando o componente
-export default App;
+export default App
