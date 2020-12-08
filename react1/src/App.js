@@ -1,19 +1,36 @@
-// todo elemento é um componente que pode aparecer na tela.
+import React from "react";
 
-import React from 'react';
-
-function welcome(){
-  return <h1>Ola, Osmar</h1>
+function BemVindo(props){
+  return(
+    <div>
+      <h1>Osmar {props.name} vc tem: {props.idade} anos</h1>
+    </div>
+  )
 }
 
-
-function App(){
-
-  
-  return <div class="conteudo">
-
-    <welcome/>
-
-  </div>
+function Avatar(props) {
+  return (
+    <div>
+      <img src={props.url} alt={props.name}></img> <br />
+      <span>{props.name}</span>
+    </div>
+  );
 }
-export default App();
+
+function App() {
+  return (
+    <div>
+      <div>
+        <BemVindo name="Lima" idade="35"/>
+      </div>
+    
+    <div>
+      <Avatar url="https://www.google.com.br/google.jpg" name="Osmar Lima" />
+    </div>
+
+    </div>
+  );
+}
+
+// chamando o componente
+export default App;
