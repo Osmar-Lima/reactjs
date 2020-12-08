@@ -1,0 +1,59 @@
+import React from 'react';
+
+function BemVindo(){
+  <h1>Ola Mundo!</h1>
+}
+/* formas de criar um componentes
+
+// com classes
+class App1 extends React.Component{
+  render(){
+    return <h1> Ola Mundo </h1>;
+  }
+}
+//com funcoes
+function App2(){
+  return <h1>testando um, dois, 3 </h1>
+}
+
+//com variaveis
+let App3 = ()=>{
+  return <h1>Osmar lima da Silva</h1>
+}
+*/
+
+
+//forma mais usada de se criar componentes
+function App(){
+  
+
+      // função para formatar o nome
+  function formatarNome(usuario){
+    return usuario.nome + ' ' + usuario.sobrenome
+  }
+
+  //criando um objeto
+  let usuario= {
+    nome: "Osmar",
+    sobrenome: "Lima"
+  }
+
+  let imagem= "https://www.google.com.br/google.jpg"
+  
+  
+  
+  // aqui eu coloco tudo que vai aparecer no navegador
+  return <div>
+
+    <BemVindo/>
+
+    Meu nome é: {formatarNome(usuario)}
+    <img src={imagem} alt="google imagem"></img>
+    
+    
+    
+    </div>
+}
+
+// chamando o componente
+export default App;
