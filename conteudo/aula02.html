@@ -1,0 +1,85 @@
+import React from "react";
+import "./App.css";
+
+
+function BemVindo(props) {
+  return (
+    <div className="bem-vindo">
+      <div className="dados">
+        <h1>
+          Osmar {props.name} vc tem: {props.idade} anos
+        </h1>
+      </div>
+    </div>
+  );
+}
+
+function Avatar(props) {
+  return (
+    <div className="avatar" >
+      <div className="img">
+        <img src={props.user.url} alt={props.user.name}></img> <br />
+      </div>
+      <span>{props.user.name}</span>
+    </div>
+  );
+}
+
+function App() {
+  let user = {
+    url: "https://www.google.com.br/google.jpg",
+    name: "Osmar Lima",
+  };
+
+  return (
+    <div>
+      <div>
+        <BemVindo name="Lima" idade="35" />
+      </div>
+    
+      <div>
+        <Avatar user={user} />
+      </div>
+    </div>
+  );
+}
+
+// chamando o componente
+export default App;
+
+
+
+-------------------------------------
+
+
+
+.dados {
+    font-size: 18px;
+    color: blue;
+    border: 1px solid red;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+  
+  .avatar {
+    width: 150px;
+    color: red;
+    border: 1px solid blue;
+    background-color: aqua;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .avatar img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background-color: yellow;
+    margin: 10px;
+    border: 1px solid black;
+  }
+  
+  span {
+    margin: 10px;
+  }
