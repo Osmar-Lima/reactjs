@@ -1,0 +1,36 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Site = styled.div`
+  width: 400px;
+  height: 400px;
+  background-color: #ccc;
+`;
+const Botao = styled.button`
+  font-size:20px;
+  padding: 10px 15px;
+  border:3x soldid green;
+  margin:5px;
+  border-radius:5px;
+  background-color: blue;
+
+`;
+// herdando as caracteristicas do btn acima.
+const BotaoPequeno = styled(Botao)`
+
+  padding:10px;
+  font-size:16px;
+  background-color: red;
+
+`;
+
+function App() {
+  return (
+    <Site>
+      <Botao> Clique Aqui</Botao>
+      <BotaoPequeno> Clique Aqui</BotaoPequeno>
+    </Site>
+  );
+}
+
+export default App;
